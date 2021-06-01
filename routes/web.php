@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 // login logout & register routes
 Auth::routes();
 
-Route::domain('{username}.'.env('APP_DOMAIN'))->group(function(){
+Route::domain('{username}.'.env('SESSION_DOMAIN'))->group(function(){
     Route::get('/', 'ProfileController@show')->name('profile.show');
 
 });
